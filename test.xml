@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<company>
+  <staff1>
+    <name nam="123" na="12" n="12345" namee="324234" nameeee="sdf">
+	<phone>
+		<telephone Expr = " -gt" ></telephone>
+	</phone>
+    </name>
+    <email id="omk@gmail.com" val="com" ext=".com" hascom="commercial">
+    	<area/>
+    	<city/>
+    </email>
+  </staff1>
+
+
+  <staff2 val="123">
+    	<name>
+		<firstname val="Omkar">
+			<nickname>Sunny</nickname>
+		</firstname>
+	</name>
+    	<phone>9870</phone>
+    	<email></email>
+    	<area/>
+    	<city/>
+    	<city1 val="value1">
+	<address value="mumbai" street="kirol" landmark="k.Hopital" pin="400070">
+		<street>
+			<pin></pin>	
+		</street>
+	</address>
+	<address1 value="mumbai" street="kirol" landmark="k.Hopital" pin="400060"/>
+    	</city1>
+  </staff2>
+
+
+  <staff3>
+    <name>furvi</name>
+    <phone>4655433</phone>
+    <email>gmail3</email>
+    <area>area3</area>
+    <city>city3</city>
+  </staff3>
+</company>

@@ -1,0 +1,32 @@
+{
+   "staff1": {
+      "name": {
+         "@nam": "123",
+         "@na": "12",
+         "@n": "12345",
+         "@namee": "324234",
+         "@nameeee": "sdf",
+         "phone": {
+            "telephone": {
+               "@Expr": "-gt"
+            }
+         }
+      },
+      "email": {
+         "@id": "omk@gmail.com",
+         "@val": "com",
+         "@ext": ".com",
+         "@hascom": "commercial",
+         "area": [],
+         "city": []
+      }
+   },
+   "staff2": {},
+   "staff3": {
+      "name": "furvi",
+      "phone": "4655433",
+      "email": "gmail3",
+      "area": "area3",
+      "city": "city3"
+   }
+}
