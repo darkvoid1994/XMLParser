@@ -1,32 +1,91 @@
-{
-   "staff1": {
-      "name": {
-         "@nam": "123",
-         "@na": "12",
-         "@n": "12345",
-         "@namee": "324234",
-         "@nameeee": "sdf",
-         "phone": {
-            "telephone": {
-               "@Expr": "-gt"
-            }
-         }
-      },
-      "email": {
-         "@id": "omk@gmail.com",
-         "@val": "com",
-         "@ext": ".com",
-         "@hascom": "commercial",
-         "area": [],
-         "city": []
-      }
-   },
-   "staff2": {},
-   "staff3": {
-      "name": "furvi",
-      "phone": "4655433",
-      "email": "gmail3",
-      "area": "area3",
-      "city": "city3"
-   }
+package pack1;
+
+import java.io.File;
+import java.io.IOException;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.NamedNodeMap;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
+import org.xml.sax.SAXException;
+
+public class HashmapPrac {
+
+	public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+		// TODO Auto-generated method stub
+		
+		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+	      DocumentBuilder builder = factory.newDocumentBuilder();
+	       
+	      //Build Document
+	      Document document = builder.parse(new File("D:/test1.xml"));
+
+
+          document.getDocumentElement().normalize();
+
+          System.out.println("Root element :" + document.getDocumentElement().getNodeName());
+
+          NodeList nodeList = document.getElementsByTagName("employee");
+
+          System.out.println("===============================================================");
+          System.out.print(nodeList.getLength());
+          int count=0;
+          //do this the old way, because nodeList is not iterable
+          for (int itr = 0; itr < nodeList.getLength(); itr++) {
+
+              Node node = nodeList.item(itr);
+
+              System.out.println("\nNode Name :" + node.getNodeName());
+
+              if (node.getNodeType() == Node.ELEMENT_NODE) {
+
+            	  
+//            	  NamedNodeMap nodeMap = node.getAttributes();
+                  Element eElement = (Element) node;
+
+                  System.out.println("Employee id : "
+                          + eElement.getAttribute("id"));
+                  if(eElement.hasAttribute("id") && (eElement.getAttribute("FROMINSTANCE").equals("SOURCE"))) {
+//					System.out.print("Fine");
+					
+					count++;
+				}
+                  
+                  if (node.hasAttributes()) {
+                	  
+
+          			// get attributes names and values
+          			NamedNodeMap nodeMap = node.getAttributes();
+
+          			
+          			for (int i = 0; i < nodeMap.getLength(); i++) {
+          				
+
+          				
+          				Node node1 = nodeMap.item(i);
+          				System.out.println("attr name : " + node1.getNodeName());
+          				System.out.println("attr value : " + node1.getNodeValue());
+          				
+          				
+
+          			}
+          			
+          			
+          			
+
+          		}
+                  
+                  
+                  
+                  
+}
+              
+}
+          System.out.println("Count"+count );
+	}
 }
