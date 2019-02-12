@@ -1,0 +1,10 @@
+ System.out.println(ret);
+		java.util.Iterator<String> itr = ret.iterator();   
+        while(itr.hasNext())   
+        {   
+         String element = itr.next()+", "+itr.next()+", "+itr.next();   
+         System.out.print(element + " "); 
+         System.out.println();
+        }   
+        
+		
